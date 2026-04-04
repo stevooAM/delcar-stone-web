@@ -3,25 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #8B6D1F;
+  --gold-bright: #c9a84c;
+  --gold-light: #D4C4A0;
+  --navy: #1B2B5E;
+  --navy-deep: #0f1a3d;
+  --stone: #F7F5F0;
+  --charcoal: #2C2C2C;
+  --dark: #0d0b08;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@layer base {
+  * { box-sizing: border-box; }
 }
