@@ -6,7 +6,6 @@ import { CollectionsSection } from '@/components/sections/CollectionsSection'
 import { FeaturedSection } from '@/components/sections/FeaturedSection'
 import { WhySection } from '@/components/sections/WhySection'
 import { ApplicationsSection } from '@/components/sections/ApplicationsSection'
-import { CatalogueStrip } from '@/components/sections/CatalogueStrip'
 import { CTASection } from '@/components/sections/CTASection'
 import { ContactSection } from '@/components/sections/ContactSection'
 
