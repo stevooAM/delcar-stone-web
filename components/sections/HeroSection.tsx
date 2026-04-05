@@ -38,6 +38,12 @@ const floatingImages = [
     depth: 0.4,
     className: 'absolute bottom-[12%] left-[6%] w-40 h-28 md:w-56 md:h-36 rounded-lg shadow-2xl overflow-hidden',
   },
+  {
+    src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Stone-clad architectural real estate project',
+    depth: 0.7,
+    className: 'absolute bottom-[10%] right-[4%] w-36 h-36 md:w-52 md:h-52 rounded-lg shadow-2xl overflow-hidden',
+  },
 ]
 
 const rotatingPhrases = [
