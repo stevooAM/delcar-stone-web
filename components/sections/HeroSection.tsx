@@ -6,43 +6,37 @@ import { Button } from '@/components/ui/Button'
 import { TextRotate } from '@/components/ui/text-rotate'
 import { Floating, FloatingElement } from '@/components/ui/parallax-floating'
 
-/* ─── stone photography from Unsplash ────────────────────────────────── */
+/* ─── stone-clad real estate photography ─────────────────────────────── */
 const floatingImages = [
   {
-    src: 'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=600&q=80',
-    alt: 'Natural stone facade detail',
+    src: 'https://images.pexels.com/photos/19922934/pexels-photo-19922934.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Stone-clad villa with sea view at sunset',
     depth: 0.8,
     className: 'absolute top-[8%] left-[4%] w-36 h-48 md:w-48 md:h-64 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?w=600&q=80',
-    alt: 'Stone cladding architectural exterior',
+    src: 'https://images.pexels.com/photos/7524429/pexels-photo-7524429.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Dark stone modernist architectural walkway',
     depth: 0.5,
     className: 'absolute top-[5%] right-[5%] w-44 h-32 md:w-64 md:h-44 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    alt: 'Interior stone wall feature',
+    src: 'https://images.pexels.com/photos/12359235/pexels-photo-12359235.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Modern building facade with metal cladding panels',
     depth: 1,
     className: 'absolute top-[35%] left-[1%] w-28 h-40 md:w-40 md:h-56 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
-    alt: 'Luxury stone interior design',
+    src: 'https://images.pexels.com/photos/18821290/pexels-photo-18821290.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Curved stone building with glass balcony',
     depth: 0.6,
     className: 'absolute top-[32%] right-[2%] w-32 h-44 md:w-44 md:h-60 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
-    alt: 'Stone texture closeup',
+    src: 'https://images.pexels.com/photos/11182195/pexels-photo-11182195.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Stone cladding real estate exterior',
     depth: 0.4,
     className: 'absolute bottom-[12%] left-[6%] w-40 h-28 md:w-56 md:h-36 rounded-lg shadow-2xl overflow-hidden',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80',
-    alt: 'Modern architecture with stone elements',
-    depth: 0.7,
-    className: 'absolute bottom-[10%] right-[4%] w-36 h-36 md:w-52 md:h-52 rounded-lg shadow-2xl overflow-hidden',
   },
 ]
 
