@@ -21,7 +21,6 @@ export default function Home() {
         <FeaturedSection />
         <WhySection />
         <ApplicationsSection />
-        <CatalogueStrip />
         <CTASection />
         <ContactSection />
       </main>
