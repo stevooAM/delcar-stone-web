@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import { featuredProducts, seriesGroups } from '@/lib/data/products'
 
-const collections = ['Volantis', 'Paterno', 'Gravenwood', 'Mount Leuser', 'Irregular Series', 'Brick Series']
+const collections = [
+  ...featuredProducts.map((product) => product.name),
+  ...seriesGroups.filter((group) => !featuredProducts.some((product) => product.seriesGroup === group)),
+]
 const company = ['About Delcar Stone', 'Projects Gallery', 'Request a Sample', 'Get a Quote', 'Technical Downloads']
 
 export function Footer() {
