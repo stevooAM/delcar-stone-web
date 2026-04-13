@@ -10,8 +10,8 @@ export function FeaturedSection() {
       {/* Visual */}
       <div className="relative overflow-hidden min-h-[360px]">
         <Image
-          src="/images/volantis.jpg"
-          alt="Volantis horizontal stone block wall — Delcar Stone flagship series"
+          src="/images/pangolin-pictures/31.png"
+          alt="Volantis-inspired Pangolin stone facade"
           fill
           className="object-cover object-center"
           sizes="(max-width: 1024px) 100vw, 50vw"
@@ -32,16 +32,16 @@ export function FeaturedSection() {
           Architecture in <em className="text-gold-bright">every block.</em>
         </h2>
         <p className="text-base font-light leading-[1.75] text-white/55 mb-9">
-          Composed of regular horizontal stone blocks, Volantis&apos; modular structure enables fast installation while delivering a bold, confident wall presence. Available in 11 colours with corner modules.
+          {volantis.description} Available in {volantis.colours.length} colours with {volantis.cornersAvailable ? 'corner modules' : 'straight-run formats'}.
         </p>
 
         {/* Spec grid */}
         <div className="grid grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] mb-9" role="table" aria-label="Volantis specifications">
           {[
-            ['Size Range', '75 – 600 cm²'],
-            ['Thickness', '3.5 – 5.5 cm'],
-            ['M² per Box', '0.70 m²'],
-            ['Weight / m²', '45 kg'],
+            ['Size Range', `${volantis.specs.sizeCm2} cm²`],
+            ['Thickness', `${volantis.specs.thicknessCm} cm`],
+            ['M² per Box', `${volantis.specs.m2PerBox.toFixed(2)} m²`],
+            ['Weight / m²', `${volantis.specs.weightPerM2Kg} kg`],
           ].map(([label, value]) => (
             <div key={label} className="px-6 py-5 bg-navy-deep" role="row">
               <div className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/35 mb-2" role="rowheader">{label}</div>

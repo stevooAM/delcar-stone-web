@@ -5,42 +5,42 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { TextRotate } from '@/components/ui/text-rotate'
 import { Floating, FloatingElement } from '@/components/ui/parallax-floating'
+import { products, seriesGroups } from '@/lib/data/products'
 
-/* ─── stone-clad real estate photography ─────────────────────────────── */
 const floatingImages = [
   {
-    src: 'https://images.pexels.com/photos/19922934/pexels-photo-19922934.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Stone-clad villa with sea view at sunset',
+    src: '/images/pangolin-pictures/31.png',
+    alt: 'Pangolin stone exterior residence',
     depth: 0.8,
     className: 'absolute top-[8%] left-[4%] w-36 h-48 md:w-48 md:h-64 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.pexels.com/photos/7524429/pexels-photo-7524429.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Dark stone modernist architectural walkway',
+    src: '/images/pangolin-pictures/61.png',
+    alt: 'Pangolin stone-clad villa facade',
     depth: 0.5,
     className: 'absolute top-[5%] right-[5%] w-44 h-32 md:w-64 md:h-44 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.pexels.com/photos/12359235/pexels-photo-12359235.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Modern building facade with metal cladding panels',
+    src: '/images/pangolin-pictures/21.png',
+    alt: 'Interior Pangolin feature wall',
     depth: 1,
     className: 'absolute top-[35%] left-[1%] w-28 h-40 md:w-40 md:h-56 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.pexels.com/photos/18821290/pexels-photo-18821290.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Curved stone building with glass balcony',
+    src: '/images/pangolin-pictures/49.png',
+    alt: 'Commercial Pangolin stone installation',
     depth: 0.6,
     className: 'absolute top-[32%] right-[2%] w-32 h-44 md:w-44 md:h-60 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.pexels.com/photos/11182195/pexels-photo-11182195.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Stone cladding real estate exterior',
+    src: '/images/pangolin-pictures/1.png',
+    alt: 'Warm Pangolin stone kitchen wall',
     depth: 0.4,
     className: 'absolute bottom-[12%] left-[6%] w-40 h-28 md:w-56 md:h-36 rounded-lg shadow-2xl overflow-hidden',
   },
   {
-    src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Stone-clad architectural real estate project',
+    src: '/images/pangolin-pictures/53.png',
+    alt: 'Hospitality-style Pangolin stone setting',
     depth: 0.7,
     className: 'absolute bottom-[10%] right-[4%] w-36 h-36 md:w-52 md:h-52 rounded-lg shadow-2xl overflow-hidden',
   },
@@ -130,7 +130,7 @@ export function HeroSection() {
 
         {/* Sub-copy */}
         <p className="text-sm font-light text-white/55 leading-[1.8] mb-10 max-w-sm">
-          Seven signature collections. Thirty-plus products. Natural stone panels crafted for facades, feature walls, and architectural interiors across Ghana and beyond.
+          {seriesGroups.length} brochure-backed series. {products.length} stone definitions. Pangolin walling solutions curated for facades, feature walls, and architectural interiors across Ghana and beyond.
         </p>
 
         {/* CTAs */}

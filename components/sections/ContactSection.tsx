@@ -1,3 +1,5 @@
+import { products, seriesGroups } from '@/lib/data/products'
+
 export function ContactSection() {
   return (
     <section className="bg-stone px-[10vw] py-24" id="contact" aria-labelledby="contact-heading">
@@ -57,10 +59,17 @@ export function ContactSection() {
             <label htmlFor="collection" className="text-[11px] font-medium tracking-[0.2em] uppercase text-grey">Collection of Interest</label>
             <select id="collection" name="collection" className="bg-white border border-gold/20 rounded-[2px] px-4 py-3 font-body text-sm text-charcoal outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
               <option value="">Select a collection...</option>
-              <optgroup label="Modular Series"><option value="volantis">Volantis</option><option value="roldos">Roldos</option><option value="mujica">Mujica</option><option value="maya">Maya</option></optgroup>
-              <optgroup label="Natural Stone"><option value="paterno">Paterno</option><option value="gravenwood">Gravenwood</option><option value="mount-leuser">Mount Leuser</option><option value="travertino">Travertino</option></optgroup>
-              <optgroup label="Irregular Series"><option value="herrera">Herrera</option><option value="lumumba">Lumumba</option><option value="atacama">Atacama</option></optgroup>
-              <optgroup label="Brick Series"><option value="the-glade">The Glade</option><option value="java">Java</option><option value="kalahari">Kalahari</option></optgroup>
+              {seriesGroups.map((group) => (
+                <optgroup key={group} label={group}>
+                  {products
+                    .filter((product) => product.seriesGroup === group)
+                    .map((product) => (
+                      <option key={product.slug} value={product.slug}>
+                        {product.name}
+                      </option>
+                    ))}
+                </optgroup>
+              ))}
               <option value="not-sure">Not sure yet</option>
             </select>
           </div>
