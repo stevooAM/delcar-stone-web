@@ -32,7 +32,7 @@ export function Footer() {
           <p className="text-[11px] font-medium tracking-[0.3em] uppercase text-gold-bright mb-5">Collections</p>
           <ul className="space-y-3">
             {collections.map(c => (
-              <li key={c}><Link href="#collections" className="text-sm text-white/40 hover:text-white transition-colors">{c}</Link></li>
+              <li key={c}><Link href="/catalogue" className="text-sm text-white/40 hover:text-white transition-colors">{c}</Link></li>
             ))}
           </ul>
         </div>
@@ -41,7 +41,7 @@ export function Footer() {
           <p className="text-[11px] font-medium tracking-[0.3em] uppercase text-gold-bright mb-5">Company</p>
           <ul className="space-y-3">
             {company.map(c => (
-              <li key={c}><Link href="#contact" className="text-sm text-white/40 hover:text-white transition-colors">{c}</Link></li>
+              <li key={c}><Link href={c === 'About Delcar Stone' ? '/#about' : c === 'Projects Gallery' ? '/#projects' : '/#contact'} className="text-sm text-white/40 hover:text-white transition-colors">{c}</Link></li>
             ))}
           </ul>
         </div>

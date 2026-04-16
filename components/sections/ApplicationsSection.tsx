@@ -3,15 +3,15 @@ import Image from 'next/image'
 const apps = [
   {
     id: 'exterior',
-    image: '/images/pangolin-pictures/31.png',
+    image: '/images/delcar-stone-curated/application-exterior.png',
     title: 'Exterior Facades',
-    subtitle: 'Weather-resistant brochure collections for homes, villas, and frontage walls',
+    subtitle: 'Weather-resistant stone systems for homes, villas, and frontage walls',
     series: ['Volantis', 'Invicta', 'Atacama'],
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 21V9l9-7 9 7v12"/><path d="M9 21V12h6v9"/></svg>,
   },
   {
     id: 'interior',
-    image: '/images/pangolin-pictures/1.png',
+    image: '/images/delcar-stone-curated/application-interior.png',
     title: 'Interior Feature Walls',
     subtitle: 'Textured surfaces for living spaces, kitchens, and hospitality interiors',
     series: ['Gravenwood', 'Travertino', 'Slate'],
@@ -19,9 +19,9 @@ const apps = [
   },
   {
     id: 'commercial',
-    image: '/images/pangolin-pictures/49.png',
+    image: '/images/delcar-stone-curated/application-commercial.png',
     title: 'Commercial & Hospitality',
-    subtitle: 'Bold brochure-led selections for retail, leisure, and public-facing spaces',
+    subtitle: 'Bold stone selections for retail, leisure, and public-facing spaces',
     series: ['Persia', 'Lumumba', 'Java'],
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" aria-hidden="true"><path d="M2 22V8l10-6 10 6v14"/><path d="M6 22V14h4v8M14 22V14h4v8"/><path d="M2 12h20"/></svg>,
   },

@@ -12,7 +12,7 @@ export interface ProductSeries {
   application: ('exterior' | 'interior' | 'both')[]
   cornersAvailable: boolean
   seriesGroup: string
-  brochureImage: string
+  projectImage: string
   specs: {
     sizeCm2: string
     thicknessCm: string
@@ -37,7 +37,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Modular Series',
-    brochureImage: '/images/pangolin-stones/8.png',
+    projectImage: '/images/delcar-stone-curated/stone-volantis.png',
     specs: { sizeCm2: '75 – 600', thicknessCm: '3.5 – 5.5', m2PerBox: 0.7, weightPerM2Kg: 45 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -63,7 +63,7 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Signature Series',
-    brochureImage: '/images/pangolin-stones/2.png',
+    projectImage: '/images/delcar-stone-curated/stone-gravenwood.png',
     specs: { sizeCm2: '480', thicknessCm: '2 – 3.5', m2PerBox: 0.72, weightPerM2Kg: 38 },
     colours: [cool('gris', 'Gris'), warm('marron', 'Marron'), neutral('perola', 'Perola')],
     featured: true,
@@ -77,7 +77,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Modular Series',
-    brochureImage: '/images/pangolin-stones/12.png',
+    projectImage: '/images/delcar-stone-curated/stone-roldos.png',
     specs: { sizeCm2: '200 – 500', thicknessCm: '1.5 – 2.5', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -103,7 +103,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    brochureImage: '/images/pangolin-stones/18.png',
+    projectImage: '/images/delcar-stone-curated/stone-persia.png',
     specs: { sizeCm2: '100 – 900', thicknessCm: '1.5 – 2.5', m2PerBox: 1.25, weightPerM2Kg: 30 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -125,7 +125,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: false,
     seriesGroup: 'Linear & Slab Series',
-    brochureImage: '/images/pangolin-stones/22.png',
+    projectImage: '/images/delcar-stone-curated/stone-travertino.png',
     specs: { sizeCm2: '1500', thicknessCm: '2 – 2.5', m2PerBox: 1.5, weightPerM2Kg: 30 },
     colours: [warm('beige', 'Beige'), warm('mojave', 'Mojave')],
     featured: true,
@@ -139,7 +139,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Linear & Slab Series',
-    brochureImage: '/images/pangolin-stones/20.png',
+    projectImage: '/images/delcar-stone-curated/stone-baja-california.png',
     specs: { sizeCm2: '450', thicknessCm: '2 – 3.5', m2PerBox: 0.94, weightPerM2Kg: 38 },
     colours: [
       warm('caliente', 'Caliente'),
@@ -158,7 +158,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    brochureImage: '/images/pangolin-stones/28.png',
+    projectImage: '/images/delcar-stone-curated/stone-ilion.png',
     specs: { sizeCm2: '110 – 390', thicknessCm: '2 – 3', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       warm('arena', 'Arena'),
@@ -177,7 +177,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    brochureImage: '/images/pangolin-stones/34.png',
+    projectImage: '/images/delcar-stone-curated/stone-lumumba.png',
     specs: { sizeCm2: '35 – 350', thicknessCm: '3 – 5', m2PerBox: 0.8, weightPerM2Kg: 44 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -202,7 +202,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    brochureImage: '/images/pangolin-stones/38.png',
+    projectImage: '/images/delcar-stone-curated/stone-atacama.png',
     specs: { sizeCm2: '40 – 400', thicknessCm: '2 – 5', m2PerBox: 1.0, weightPerM2Kg: 40 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -225,7 +225,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    brochureImage: '/images/pangolin-stones/30.png',
+    projectImage: '/images/delcar-stone-curated/stone-ota-benga.png',
     specs: { sizeCm2: '20 – 400', thicknessCm: '2 – 4', m2PerBox: 1.0, weightPerM2Kg: 35 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -249,7 +249,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    brochureImage: '/images/pangolin-stones/42.png',
+    projectImage: '/images/delcar-stone-curated/stone-la-rinconada.png',
     specs: { sizeCm2: '40 – 450', thicknessCm: '2 – 5.5', m2PerBox: 0.8, weightPerM2Kg: 44 },
     colours: [
       warm('arena', 'Arena'),
@@ -270,7 +270,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    brochureImage: '/images/pangolin-stones/48.png',
+    projectImage: '/images/delcar-stone-curated/stone-invicta.png',
     specs: { sizeCm2: '110 – 350', thicknessCm: '1.5 – 3', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       warm('arena', 'Arena'),
@@ -292,7 +292,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    brochureImage: '/images/pangolin-stones/50.png',
+    projectImage: '/images/delcar-stone-curated/stone-monte-pellegrino.png',
     specs: { sizeCm2: '20 – 400', thicknessCm: '2 – 5', m2PerBox: 0.8, weightPerM2Kg: 38 },
     colours: [
       warm('calidum', 'Calidum'),
@@ -310,7 +310,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    brochureImage: '/images/pangolin-stones/54.png',
+    projectImage: '/images/delcar-stone-curated/stone-the-glade.png',
     specs: { sizeCm2: '77 – 120', thicknessCm: '1.5 – 1.8', m2PerBox: 1.2, weightPerM2Kg: 23 },
     colours: [
       warm('brunetta', 'Brunetta'),
@@ -337,7 +337,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    brochureImage: '/images/pangolin-stones/58.png',
+    projectImage: '/images/delcar-stone-curated/stone-java.png',
     specs: { sizeCm2: '60 – 120', thicknessCm: '1.5 – 1.8', m2PerBox: 1.0, weightPerM2Kg: 20 },
     colours: [
       warm('antico', 'Antico'),
@@ -364,7 +364,7 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    brochureImage: '/images/pangolin-stones/62.png',
+    projectImage: '/images/delcar-stone-curated/stone-carnivore.png',
     specs: { sizeCm2: '56 – 112', thicknessCm: '1.5 – 1.8', m2PerBox: 1.0, weightPerM2Kg: 18 },
     colours: [
       neutral('bianco', 'Bianco'),
@@ -387,7 +387,7 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Brick Series',
-    brochureImage: '/images/pangolin-stones/66.png',
+    projectImage: '/images/delcar-stone-curated/stone-damascus.png',
     specs: { sizeCm2: '114', thicknessCm: '1.5 – 1.8', m2PerBox: 1.15, weightPerM2Kg: 22 },
     colours: [
       warm('beige', 'Beige'),
@@ -408,7 +408,7 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Linear & Slab Series',
-    brochureImage: '/images/pangolin-stones/70.png',
+    projectImage: '/images/delcar-stone-curated/stone-slate.png',
     specs: { sizeCm2: '152', thicknessCm: '3.5 – 4', m2PerBox: 0.64, weightPerM2Kg: 32 },
     colours: [neutral('bianco', 'Bianco'), neutral('warm-ash', 'Warm Ash'), neutral('ivory', 'Ivory')],
     featured: false,

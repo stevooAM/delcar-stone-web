@@ -1,10 +1,17 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navItems = [
+    { label: 'Catalogue', href: '/catalogue' },
+    { label: 'Projects', href: '/#projects' },
+    { label: 'About', href: '/#about' },
+    { label: 'Contact', href: '/#contact' },
+  ]
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60)
@@ -20,32 +27,31 @@ export function Header() {
         }`}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3" aria-label="Delcar Stone Home">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M6 4L6 36L22 36C31 36 36 30 36 20C36 10 31 4 22 4Z" stroke="#c9a84c" strokeWidth="2"/>
-            <path d="M13 28L13 20L20 14L27 20L27 28" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
-            <path d="M17 28L17 22L23 22L23 28" stroke="#c9a84c" strokeWidth="1.5"/>
-          </svg>
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-[18px] font-semibold tracking-[0.12em] text-white">DELCAR</span>
-            <span className="font-body text-[9px] font-medium tracking-[0.35em] uppercase text-gold-bright mt-0.5">Stone</span>
-          </div>
+        <Link href="/" aria-label="Delcar Stone Home">
+          <Image
+            src="/images/logo.jpeg"
+            alt="Delcar Stone"
+            width={110}
+            height={44}
+            className="object-contain rounded-sm"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-9" aria-label="Main navigation">
-          {['Collections', 'Projects', 'About', 'Contact'].map(item => (
+          {navItems.map(item => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-[13px] font-medium tracking-[0.08em] uppercase text-white/75 hover:text-white transition-colors relative group"
             >
-              {item}
+              {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold-bright group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-[12px] font-medium tracking-[0.12em] uppercase text-gold-bright border border-gold px-6 py-2 rounded-sm hover:bg-gold hover:text-white transition-all duration-200"
           >
             Request a Sample
@@ -79,14 +85,14 @@ export function Header() {
         }`}
         aria-hidden={!menuOpen}
       >
-        {['Collections', 'Projects', 'About', 'Contact'].map(item => (
+        {navItems.map(item => (
           <Link
-            key={item}
-            href={`#${item.toLowerCase()}`}
+            key={item.label}
+            href={item.href}
             onClick={() => setMenuOpen(false)}
             className="font-display text-4xl font-light text-white hover:text-gold-bright transition-colors"
           >
-            {item}
+            {item.label}
           </Link>
         ))}
       </div>

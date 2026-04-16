@@ -22,7 +22,7 @@ const jetbrains = localFont({
 
 export const metadata: Metadata = {
   title: 'Delcar Stone — Premium Architectural Stone Cladding',
-  description: 'Delcar Stone supplies brochure-backed Pangolin stone cladding solutions for residential and commercial projects, from feature walls to architectural facades.',
+  description: 'Delcar Stone supplies premium architectural stone cladding solutions for residential and commercial projects, from feature walls to architectural facades.',
   keywords: 'stone cladding panels, architectural stone facade, exterior stone cladding Ghana, stone feature wall',
   openGraph: {
     title: 'Delcar Stone — Where Stone Meets Architecture',

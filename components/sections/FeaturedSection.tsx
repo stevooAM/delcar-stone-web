@@ -10,8 +10,8 @@ export function FeaturedSection() {
       {/* Visual */}
       <div className="relative overflow-hidden min-h-[360px]">
         <Image
-          src="/images/pangolin-pictures/31.png"
-          alt="Volantis-inspired Pangolin stone facade"
+          src="/images/delcar-stone-curated/featured-showcase.png"
+          alt="Volantis-inspired Delcar Stone facade"
           fill
           className="object-cover object-center"
           sizes="(max-width: 1024px) 100vw, 50vw"
