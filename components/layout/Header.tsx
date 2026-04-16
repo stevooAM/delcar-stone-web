@@ -22,8 +22,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 h-[72px] transition-all duration-300 ${
-          scrolled ? 'bg-dark/95 backdrop-blur-md shadow-[0_1px_0_rgba(139,109,31,0.3)]' : ''
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 h-[72px] transition-all duration-300 bg-white ${
+          scrolled
+            ? 'shadow-[0_2px_24px_rgba(27,43,94,0.10)]'
+            : 'shadow-[0_1px_0_rgba(27,43,94,0.08)]'
         }`}
       >
         {/* Logo */}
@@ -44,15 +46,15 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-[13px] font-medium tracking-[0.08em] uppercase text-white/75 hover:text-white transition-colors relative group"
+              className="text-[13px] font-medium tracking-[0.08em] uppercase text-navy/65 hover:text-navy transition-colors relative group"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold-bright group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
           <Link
             href="/#contact"
-            className="text-[12px] font-medium tracking-[0.12em] uppercase text-gold-bright border border-gold px-6 py-2 rounded-sm hover:bg-gold hover:text-white transition-all duration-200"
+            className="text-[12px] font-medium tracking-[0.12em] uppercase text-white bg-navy px-6 py-2 rounded-sm hover:bg-navy-light transition-all duration-200"
           >
             Request a Sample
           </Link>
@@ -68,7 +70,7 @@ export function Header() {
           {[0, 1, 2].map(i => (
             <span
               key={i}
-              className={`block w-6 h-[1.5px] bg-white transition-all duration-300 ${
+              className={`block w-6 h-[1.5px] bg-navy transition-all duration-300 ${
                 menuOpen
                   ? i === 0 ? 'translate-y-[6.5px] rotate-45' : i === 1 ? 'opacity-0' : '-translate-y-[6.5px] -rotate-45'
                   : ''
@@ -80,21 +82,30 @@ export function Header() {
 
       {/* Mobile Nav */}
       <div
-        className={`fixed inset-0 z-40 bg-dark flex flex-col items-center justify-center gap-8 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8 transition-opacity duration-300 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!menuOpen}
       >
+        {/* Gold accent line at top */}
+        <div className="absolute top-[72px] left-[10vw] right-[10vw] h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
         {navItems.map(item => (
           <Link
             key={item.label}
             href={item.href}
             onClick={() => setMenuOpen(false)}
-            className="font-display text-4xl font-light text-white hover:text-gold-bright transition-colors"
+            className="font-display text-4xl font-light text-navy hover:text-gold transition-colors"
           >
             {item.label}
           </Link>
         ))}
+        <Link
+          href="/#contact"
+          onClick={() => setMenuOpen(false)}
+          className="mt-4 text-[12px] font-medium tracking-[0.12em] uppercase text-white bg-navy px-8 py-3 rounded-sm hover:bg-navy-light transition-all"
+        >
+          Request a Sample
+        </Link>
       </div>
     </>
   )

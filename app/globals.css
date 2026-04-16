@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --gold: #8B6D1F;
+  --gold: #9A7A14;
   --gold-bright: #c9a84c;
   --gold-light: #D4C4A0;
   --navy: #1B2B5E;
   --navy-deep: #0f1a3d;
-  --stone: #F7F5F0;
+  --stone: #FFFFFF;
   --charcoal: #2C2C2C;
-  --dark: #0d0b08;
+  --dark: #080e1f;
 }
 
 html { scroll-behavior: smooth; }

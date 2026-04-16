@@ -44,7 +44,7 @@ export function WhySection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
         {cards.map(({ num, title, text, icon }) => (
-          <div key={num} className="relative bg-dark-2 p-12 overflow-hidden group hover:bg-[#1a1510] transition-colors duration-300">
+          <div key={num} className="relative bg-dark-2 p-12 overflow-hidden group hover:bg-[#111d3a] transition-colors duration-300">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
             <div className="mb-7">{icon}</div>
             <h3 className="font-display text-2xl font-medium text-white mb-4">{title}</h3>

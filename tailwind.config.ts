@@ -5,12 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: { DEFAULT: '#8B6D1F', bright: '#c9a84c', light: '#D4C4A0', pale: '#f0e9d6' },
+        gold: { DEFAULT: '#9A7A14', bright: '#c9a84c', light: '#D4C4A0', pale: '#f0e9d6' },
         navy: { DEFAULT: '#1B2B5E', deep: '#0f1a3d', light: '#2E4080' },
-        stone: { DEFAULT: '#F7F5F0', dark: '#ede9e0' },
+        stone: { DEFAULT: '#FFFFFF', dark: '#f0efed' },
         charcoal: '#2C2C2C',
         grey: '#6B6B6B',
-        dark: { DEFAULT: '#0d0b08', 2: '#13100d' },
+        dark: { DEFAULT: '#080e1f', 2: '#0d1530' },
       },
       fontFamily: {
         display: ['var(--font-cormorant)', 'Georgia', 'serif'],

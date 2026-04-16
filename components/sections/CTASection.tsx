@@ -7,7 +7,7 @@ export function CTASection() {
       <div
         className="absolute inset-0"
         style={{
-          background: `radial-gradient(ellipse 80% 60% at 20% 80%, rgba(139,109,31,0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 80% at 80% 20%, rgba(27,43,94,0.2) 0%, transparent 55%), linear-gradient(160deg, #1a1208 0%, #0d0b08 100%)`
+          background: `radial-gradient(ellipse 80% 60% at 20% 80%, rgba(154,122,20,0.18) 0%, transparent 55%), radial-gradient(ellipse 60% 80% at 80% 20%, rgba(27,43,94,0.3) 0%, transparent 55%), linear-gradient(160deg, #0d1530 0%, #080e1f 100%)`
         }}
         aria-hidden="true"
       >

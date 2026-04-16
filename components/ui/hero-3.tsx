@@ -24,7 +24,7 @@ const ActionButton = ({
   href?: string;
 }) => {
   const cls =
-    "mt-8 px-8 py-3 rounded-sm bg-gold text-white font-medium tracking-[0.08em] text-sm uppercase shadow-lg transition-colors hover:bg-gold-bright focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-75";
+    "mt-8 px-8 py-3 rounded-sm bg-navy text-white font-medium tracking-[0.08em] text-sm uppercase shadow-md transition-colors hover:bg-navy-light focus:outline-none focus:ring-2 focus:ring-navy focus:ring-opacity-40";
   if (href) {
     return (
       <motion.a
@@ -56,7 +56,7 @@ const OutlineButton = ({
   href?: string;
 }) => {
   const cls =
-    "mt-8 px-8 py-3 rounded-sm border border-gold text-gold-bright font-medium tracking-[0.08em] text-sm uppercase transition-colors hover:bg-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-75";
+    "mt-8 px-8 py-3 rounded-sm border border-gold text-gold font-medium tracking-[0.08em] text-sm uppercase transition-colors hover:bg-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-40";
   if (href) {
     return (
       <motion.a
@@ -105,17 +105,36 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full h-screen min-h-[700px] overflow-hidden bg-dark flex flex-col items-center justify-center text-center px-4",
+        "relative w-full h-screen min-h-[700px] overflow-hidden bg-white flex flex-col items-center justify-center text-center px-4",
         className
       )}
       aria-label="Hero"
     >
-      {/* Radial glow */}
+      {/* Subtle dot-grid texture — adds depth without competing with content */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(rgba(27,43,94,0.055) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Very subtle gold radial warmth at centre */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(139,109,31,0.14) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 50% 42%, rgba(154,122,20,0.06) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Bottom fade — blends marquee into white field */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-[200px] pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
         }}
         aria-hidden="true"
       />
@@ -129,7 +148,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           className="mb-5 inline-flex items-center gap-3"
         >
           <div className="w-8 h-px bg-gold" aria-hidden="true" />
-          <span className="text-[10px] font-medium tracking-[0.4em] uppercase text-gold-bright">
+          <span className="text-[10px] font-medium tracking-[0.4em] uppercase text-gold">
             {tagline}
           </span>
           <div className="w-8 h-px bg-gold" aria-hidden="true" />
@@ -143,7 +162,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             hidden: {},
             show: { transition: { staggerChildren: 0.08 } },
           }}
-          className="font-display font-light text-white leading-[1.05] tracking-tight"
+          className="font-display font-light text-navy leading-[1.05] tracking-tight"
           style={{ fontSize: "clamp(44px, 6vw, 82px)" }}
         >
           {typeof title === "string"
@@ -165,7 +184,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.45 }}
-          className="mt-6 max-w-md text-sm font-light text-white/55 leading-[1.8]"
+          className="mt-6 max-w-md text-sm font-light text-navy/55 leading-[1.8]"
         >
           {description}
         </motion.p>
@@ -211,9 +230,9 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={src}
-                alt={`Stone collection ${(index % (images.length)) + 1}`}
-                className="w-full h-full object-cover rounded-xl shadow-2xl"
-                style={{ boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.2)" }}
+                alt={`Stone collection ${(index % images.length) + 1}`}
+                className="w-full h-full object-cover rounded-xl shadow-xl"
+                style={{ boxShadow: "0 8px 32px rgba(27,43,94,0.18), inset 0 0 0 1px rgba(154,122,20,0.15)" }}
               />
             </div>
           ))}
@@ -225,10 +244,10 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20"
         aria-hidden="true"
       >
-        <span className="text-[9px] tracking-[0.35em] uppercase text-white/35">
+        <span className="text-[9px] tracking-[0.35em] uppercase text-navy/35">
           Scroll
         </span>
-        <div className="w-px h-10 bg-gradient-to-b from-gold/70 to-transparent" />
+        <div className="w-px h-10 bg-gradient-to-b from-gold/60 to-transparent" />
       </div>
     </section>
   );
