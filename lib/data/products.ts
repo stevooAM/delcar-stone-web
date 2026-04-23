@@ -375,6 +375,7 @@ export const products: ProductSeries[] = [
     ],
     featured: false,
   },
+  /*
   {
     slug: 'the-glade',
     name: 'The Glade',
@@ -439,6 +440,7 @@ export const products: ProductSeries[] = [
     ],
     featured: false,
   },
+  
   {
     slug: 'carnivore',
     name: 'Carnivore',
@@ -467,6 +469,8 @@ export const products: ProductSeries[] = [
     ],
     featured: false,
   },
+  
+  
   {
     slug: 'damascus',
     name: 'Damascus',
@@ -493,6 +497,7 @@ export const products: ProductSeries[] = [
     ],
     featured: false,
   },
+  */
   {
     slug: 'slate',
     name: 'Slate',
