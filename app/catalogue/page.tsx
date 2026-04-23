@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { ProductApplicationShowcase } from '@/components/ui/ProductApplicationShowcase'
 import { products } from '@/lib/data/products'
 
 export default function CataloguePage() {
@@ -78,20 +78,7 @@ export default function CataloguePage() {
                   </div>
                 </div>
 
-                <div className="relative min-h-[360px] lg:min-h-full bg-white">
-                  <Image
-                    src={product.projectImage}
-                    alt={`${product.name} installed in a housing project`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
-                  <div className="absolute left-6 bottom-6 right-6">
-                    <p className="text-[10px] font-medium tracking-[0.28em] uppercase text-gold-bright mb-2">Project Sample</p>
-                    <p className="font-display text-[28px] font-light text-white leading-[1.1]">{product.name}</p>
-                  </div>
-                </div>
+                <ProductApplicationShowcase product={product} />
               </article>
             ))}
           </div>

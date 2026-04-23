@@ -16,10 +16,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <StatsStrip />
+        <ApplicationsSection />
         <CollectionsSection />
         <FeaturedSection />
         <WhySection />
-        <ApplicationsSection />
         <CTASection />
         <ContactSection />
       </main>

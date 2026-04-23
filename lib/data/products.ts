@@ -12,7 +12,12 @@ export interface ProductSeries {
   application: ('exterior' | 'interior' | 'both')[]
   cornersAvailable: boolean
   seriesGroup: string
-  projectImage: string
+  definitionImage: string
+  projectImages: {
+    src: string
+    label: string
+    alt: string
+  }[]
   specs: {
     sizeCm2: string
     thicknessCm: string
@@ -26,6 +31,11 @@ export interface ProductSeries {
 const warm = (slug: string, name: string): ColourVariant => ({ slug, name, family: 'warm' })
 const cool = (slug: string, name: string): ColourVariant => ({ slug, name, family: 'cool' })
 const neutral = (slug: string, name: string): ColourVariant => ({ slug, name, family: 'neutral' })
+const sample = (src: string, label: string, productName: string) => ({
+  src,
+  label,
+  alt: `${productName} applied in a ${label.toLowerCase()}`,
+})
 
 export const products: ProductSeries[] = [
   {
@@ -37,7 +47,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Modular Series',
-    projectImage: '/images/delcar-stone-curated/stone-volantis.png',
+    definitionImage: '/images/Delcar Stone/volantis.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-volantis.png', 'residential facade', 'Volantis'),
+      sample('/images/delcar-stone-curated/stone-volantis-edited.png', 'modern villa exterior', 'Volantis'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'flagship elevation', 'Volantis'),
+    ],
     specs: { sizeCm2: '75 – 600', thicknessCm: '3.5 – 5.5', m2PerBox: 0.7, weightPerM2Kg: 45 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -63,7 +78,11 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Signature Series',
-    projectImage: '/images/delcar-stone-curated/stone-gravenwood.png',
+    definitionImage: '/images/Delcar Stone/Gravenwood.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-gravenwood.png', 'textured feature wall', 'Gravenwood'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'interior installation', 'Gravenwood'),
+    ],
     specs: { sizeCm2: '480', thicknessCm: '2 – 3.5', m2PerBox: 0.72, weightPerM2Kg: 38 },
     colours: [cool('gris', 'Gris'), warm('marron', 'Marron'), neutral('perola', 'Perola')],
     featured: true,
@@ -77,7 +96,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Modular Series',
-    projectImage: '/images/delcar-stone-curated/stone-roldos.png',
+    definitionImage: '/images/Delcar Stone/roldos.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-roldos.png', 'interior feature wall', 'Roldos'),
+      sample('/images/delcar-stone-curated/stone-roldos-edited.png', 'entry facade accent', 'Roldos'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'hospitality interior', 'Roldos'),
+    ],
     specs: { sizeCm2: '200 – 500', thicknessCm: '1.5 – 2.5', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -103,7 +127,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    projectImage: '/images/delcar-stone-curated/stone-persia.png',
+    definitionImage: '/images/Delcar Stone/persia.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-persia.png', 'warm exterior column', 'Persia'),
+      sample('/images/delcar-stone-curated/stone-persia-edited.png', 'stacked-stone facade', 'Persia'),
+      sample('/images/delcar-stone-curated/application-exterior.png', 'commercial frontage', 'Persia'),
+    ],
     specs: { sizeCm2: '100 – 900', thicknessCm: '1.5 – 2.5', m2PerBox: 1.25, weightPerM2Kg: 30 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -125,7 +154,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: false,
     seriesGroup: 'Linear & Slab Series',
-    projectImage: '/images/delcar-stone-curated/stone-travertino.png',
+    definitionImage: '/images/Delcar Stone/travertino.PNG',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-travertino.png', 'clean-lined contemporary facade', 'Travertino'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'retail elevation', 'Travertino'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'calm interior wall', 'Travertino'),
+    ],
     specs: { sizeCm2: '1500', thicknessCm: '2 – 2.5', m2PerBox: 1.5, weightPerM2Kg: 30 },
     colours: [warm('beige', 'Beige'), warm('mojave', 'Mojave')],
     featured: true,
@@ -139,7 +173,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Linear & Slab Series',
-    projectImage: '/images/delcar-stone-curated/stone-baja-california.png',
+    definitionImage: '/images/Delcar Stone/baja-california.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-baja-california.png', 'architectural exterior wall', 'Baja California'),
+      sample('/images/delcar-stone-curated/stone-baja-california-edited.png', 'minimal residential facade', 'Baja California'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'commercial frontage', 'Baja California'),
+    ],
     specs: { sizeCm2: '450', thicknessCm: '2 – 3.5', m2PerBox: 0.94, weightPerM2Kg: 38 },
     colours: [
       warm('caliente', 'Caliente'),
@@ -158,7 +197,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    projectImage: '/images/delcar-stone-curated/stone-ilion.png',
+    definitionImage: '/images/Delcar Stone/Ilion.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'stone-clad exterior wall', 'Ilion'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'mixed-use facade', 'Ilion'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'statement interior wall', 'Ilion'),
+    ],
     specs: { sizeCm2: '110 – 390', thicknessCm: '2 – 3', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       warm('arena', 'Arena'),
@@ -177,7 +221,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    projectImage: '/images/delcar-stone-curated/stone-lumumba.png',
+    definitionImage: '/images/Delcar Stone/lumumba.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'residential exterior tower', 'Lumumba'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'dramatic focal elevation', 'Lumumba'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'commercial accent wall', 'Lumumba'),
+    ],
     specs: { sizeCm2: '35 – 350', thicknessCm: '3 – 5', m2PerBox: 0.8, weightPerM2Kg: 44 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -202,7 +251,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    projectImage: '/images/delcar-stone-curated/stone-atacama.png',
+    definitionImage: '/images/Delcar Stone/atacama.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'upscale residential facade', 'Atacama'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'hospitality frontage', 'Atacama'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'hero wall elevation', 'Atacama'),
+    ],
     specs: { sizeCm2: '40 – 400', thicknessCm: '2 – 5', m2PerBox: 1.0, weightPerM2Kg: 40 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -225,7 +279,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    projectImage: '/images/delcar-stone-curated/stone-ota-benga.png',
+    definitionImage: '/images/Delcar Stone/ota-benga.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'heavy-texture facade', 'Ota Benga'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'architectural focal wall', 'Ota Benga'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'retail frontage accent', 'Ota Benga'),
+    ],
     specs: { sizeCm2: '20 – 400', thicknessCm: '2 – 4', m2PerBox: 1.0, weightPerM2Kg: 35 },
     colours: [
       cool('antracita', 'Antracita'),
@@ -249,7 +308,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    projectImage: '/images/delcar-stone-curated/stone-la-rinconada.png',
+    definitionImage: '/images/Delcar Stone/la-rinconada.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'weathered-look exterior', 'La Rinconada'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'commercial stone band', 'La Rinconada'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'heritage-style interior wall', 'La Rinconada'),
+    ],
     specs: { sizeCm2: '40 – 450', thicknessCm: '2 – 5.5', m2PerBox: 0.8, weightPerM2Kg: 44 },
     colours: [
       warm('arena', 'Arena'),
@@ -270,7 +334,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Heritage Stone Series',
-    projectImage: '/images/delcar-stone-curated/stone-invicta.png',
+    definitionImage: '/images/Delcar Stone/invicta.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'timeless facade treatment', 'Invicta'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'entry elevation', 'Invicta'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'stone-lined feature wall', 'Invicta'),
+    ],
     specs: { sizeCm2: '110 – 350', thicknessCm: '1.5 – 3', m2PerBox: 1.2, weightPerM2Kg: 30 },
     colours: [
       warm('arena', 'Arena'),
@@ -292,7 +361,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Irregular Series',
-    projectImage: '/images/delcar-stone-curated/stone-monte-pellegrino.png',
+    definitionImage: '/images/Delcar Stone/monte-pellegrino.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-exterior.png', 'layered facade composition', 'Monte Pellegrino'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'hero exterior wall', 'Monte Pellegrino'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'feature installation', 'Monte Pellegrino'),
+    ],
     specs: { sizeCm2: '20 – 400', thicknessCm: '2 – 5', m2PerBox: 0.8, weightPerM2Kg: 38 },
     colours: [
       warm('calidum', 'Calidum'),
@@ -310,7 +384,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    projectImage: '/images/delcar-stone-curated/stone-the-glade.png',
+    definitionImage: '/images/brick.jpg',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-interior.png', 'soft-toned interior wall', 'The Glade'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'slim-format exterior', 'The Glade'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'moody architectural accent', 'The Glade'),
+    ],
     specs: { sizeCm2: '77 – 120', thicknessCm: '1.5 – 1.8', m2PerBox: 1.2, weightPerM2Kg: 23 },
     colours: [
       warm('brunetta', 'Brunetta'),
@@ -337,7 +416,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    projectImage: '/images/delcar-stone-curated/stone-java.png',
+    definitionImage: '/images/brick.jpg',
+    projectImages: [
+      sample('/images/delcar-stone-curated/application-commercial.png', 'brick-style exterior', 'Java'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'warm hospitality wall', 'Java'),
+      sample('/images/delcar-stone-curated/featured-showcase.png', 'architectural brick accent', 'Java'),
+    ],
     specs: { sizeCm2: '60 – 120', thicknessCm: '1.5 – 1.8', m2PerBox: 1.0, weightPerM2Kg: 20 },
     colours: [
       warm('antico', 'Antico'),
@@ -364,7 +448,12 @@ export const products: ProductSeries[] = [
     application: ['exterior', 'interior'],
     cornersAvailable: true,
     seriesGroup: 'Brick Series',
-    projectImage: '/images/delcar-stone-curated/stone-carnivore.png',
+    definitionImage: '/images/brick.jpg',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-carnivore.png', 'modern brick facade', 'Carnivore'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'urban frontage', 'Carnivore'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'refined interior band', 'Carnivore'),
+    ],
     specs: { sizeCm2: '56 – 112', thicknessCm: '1.5 – 1.8', m2PerBox: 1.0, weightPerM2Kg: 18 },
     colours: [
       neutral('bianco', 'Bianco'),
@@ -387,7 +476,12 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Brick Series',
-    projectImage: '/images/delcar-stone-curated/stone-damascus.png',
+    definitionImage: '/images/brick.jpg',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-damascus.png', 'antique-brick feature wall', 'Damascus'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'restaurant interior wall', 'Damascus'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'heritage-style storefront', 'Damascus'),
+    ],
     specs: { sizeCm2: '114', thicknessCm: '1.5 – 1.8', m2PerBox: 1.15, weightPerM2Kg: 22 },
     colours: [
       warm('beige', 'Beige'),
@@ -408,7 +502,12 @@ export const products: ProductSeries[] = [
     application: ['interior', 'both'],
     cornersAvailable: false,
     seriesGroup: 'Linear & Slab Series',
-    projectImage: '/images/delcar-stone-curated/stone-slate.png',
+    definitionImage: '/images/Delcar Stone/slate.png',
+    projectImages: [
+      sample('/images/delcar-stone-curated/stone-slate.png', 'slim-format interior wall', 'Slate'),
+      sample('/images/delcar-stone-curated/application-interior.png', 'modern kitchen backdrop', 'Slate'),
+      sample('/images/delcar-stone-curated/application-commercial.png', 'contemporary facade strip', 'Slate'),
+    ],
     specs: { sizeCm2: '152', thicknessCm: '3.5 – 4', m2PerBox: 0.64, weightPerM2Kg: 32 },
     colours: [neutral('bianco', 'Bianco'), neutral('warm-ash', 'Warm Ash'), neutral('ivory', 'Ivory')],
     featured: false,

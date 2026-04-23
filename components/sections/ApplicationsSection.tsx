@@ -16,15 +16,7 @@ const apps = [
     subtitle: 'Textured surfaces for living spaces, kitchens, and hospitality interiors',
     series: ['Gravenwood', 'Travertino', 'Slate'],
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18" strokeLinecap="round"/></svg>,
-  },
-  {
-    id: 'commercial',
-    image: '/images/delcar-stone-curated/application-commercial.png',
-    title: 'Commercial & Hospitality',
-    subtitle: 'Bold stone selections for retail, leisure, and public-facing spaces',
-    series: ['Persia', 'Lumumba', 'Java'],
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" aria-hidden="true"><path d="M2 22V8l10-6 10 6v14"/><path d="M6 22V14h4v8M14 22V14h4v8"/><path d="M2 12h20"/></svg>,
-  },
+  }
 ]
 
 export function ApplicationsSection() {

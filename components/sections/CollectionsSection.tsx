@@ -42,8 +42,8 @@ export function CollectionsSection() {
           >
             <div className="relative aspect-[4/5]">
               <Image
-                src={product.projectImage}
-                alt={`${product.name} installed on a housing project`}
+                src={product.projectImages[0].src}
+                alt={product.projectImages[0].alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
